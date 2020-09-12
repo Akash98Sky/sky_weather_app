@@ -1,7 +1,7 @@
 {
   "name": "sky_weather_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A node.js project to find the weather of a given location.",
   "main": "src/app.ts",
   "scripts": {
     "serve": "nodemon src/app.ts",
@@ -9,7 +9,14 @@
     "build": "tsc src/app.ts --outDir out",
     "clean": "rm -rf out/*"
   },
-  "keywords": [],
+  "keywords": [
+    "Node.js",
+    "Weather",
+    "Location",
+    "Search",
+    "Website",
+    "TailwindCSS"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
