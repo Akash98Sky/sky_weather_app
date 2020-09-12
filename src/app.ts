@@ -74,7 +74,8 @@ app.get('/weather', (req, res) => {
 				address: address,
 				location,
 				current_weather: current,
-				forecast: "It's currently " + current.temp + " degrees out. There is " + current.clouds + "% chance of rain."
+				forecast: "It's currently " + current.temp + " degrees out. The high today is " + weather.daily[0].temp.max +
+					" with a low of " + weather.daily[0].temp.min + ". There is a " + current.clouds + "% chance of rain."
 			});
 		})
 	});

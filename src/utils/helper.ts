@@ -2,7 +2,7 @@ import * as request from 'request';
 import * as qs from "querystring";
 
 export function fetchJson(uri: { baseUrl: string, path?: string, queries?: {} }, callback?: (error: Error, json?: any) => void) {
-	let url = encodeURI(uri.baseUrl + (uri.path || ''));
+	let url = encodeURI(uri.baseUrl + (uri.path || ''));	
 
 	if (typeof uri.queries != 'undefined') {
 		let querystring = qs.stringify(uri.queries);
