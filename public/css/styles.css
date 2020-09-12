@@ -1,7 +1,4 @@
 body {
-	color: #333333;
-	font-family: Arial;
-
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
