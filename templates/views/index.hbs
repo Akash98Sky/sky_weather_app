@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Sky Weather App</title>
+	<link rel="icon" href="/icons/weather.png">
+	<link rel="stylesheet" href="/css/styles.css">
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+	{{>header}}
+
+	<section class="text-gray-500 bg-gray-900 body-font relative main-content">
+		<div class="container px-5 py-24 mx-auto flex sm:flex-no-wrap flex-wrap">
+			<div
+				class="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+				<div id="map">
+					<iframe title="map" class="absolute inset-0"
+						style="filter: grayscale(1) contrast(1.2) opacity(0.16);" marginheight="0" marginwidth="0"
+						scrolling="no"
+						src="https://maps.google.com/maps?width=100%&height=600&hl=en&iwloc=B&output=embed" width="100%"
+						height="100%" frameborder="0"></iframe>
+				</div>
+				<div class="bg-gray-900 relative flex flex-wrap py-6">
+					<div class="lg:w-1/2 px-6">
+						<h2 class="title-font font-medium text-white tracking-widest text-sm">ADDRESS</h2>
+						<p class="leading-relaxed" id="full_address">
+							Full address of the location will appear here.
+						</p>
+					</div>
+					<div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+						<h2 class="title-font font-medium text-white tracking-widest text-sm mt-4">FORECAST</h2>
+						<p class="leading-relaxed" id="forecast">
+							Forecast of the location will appear here.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+				<h2 class="text-white text-lg mb-1 font-medium title-font">
+					<br>
+					<br>
+					<br>
+					Check Weather
+				</h2>
+				<p class="leading-relaxed mb-5 text-gray-600">
+					Enter the address of the location and click search.
+					<br>It will show the weather for the location that best
+					matches your keyword.
+				</p>
+				<form>
+					<input
+						class="bg-gray-800 rounded border border-gray-700 focus:outline-none focus:border-teal-500 text-base text-white px-4 py-2 mb-4"
+						placeholder="Address" type="text" id="address">
+					<button
+						class="text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg"
+						type="submit">Search</button>
+				</form>
+				<p class="text-xs text-gray-500 mt-3">
+					<a id="error" style="color: red;"></a>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	{{>footer}}
+
+	<script type="module" src="/js/app.js"></script>
+</body>
+
+</html>

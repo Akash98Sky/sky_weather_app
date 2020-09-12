@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>404 Not Found</title>
+	<link rel="icon" href="/icons/weather.png">
+	<link rel="stylesheet" href="/css/styles.css">
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+	{{>header}}
+
+	<section class="text-gray-500 bg-gray-900 body-font main-content">
+		<div class="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
+			<img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQq_Kwaiqu8HlkTLwM5eZYoQ_LSDOm8bO1yyj8CP80idXyoyIKjkFbCJggf20c_YI8xnCVOY1s1NTqZwjc3q9SIUIiqRqVW4xRD8A&usqp=CAU&ec=45699845">
+			<div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
+				<h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">{{message}}</h1>
+				{{!-- <p class="mb-8 leading-relaxed">Kickstarter biodiesel roof party wayfarers cold-pressed. Palo santo
+					live-edge tumeric scenester copper mug flexitarian. Prism vice offal plaid everyday carry.
+					Gluten-free chia VHS squid listicle artisan.</p> --}}
+			</div>
+		</div>
+	</section>
+	{{>footer}}
+</body>
+
+</html>
