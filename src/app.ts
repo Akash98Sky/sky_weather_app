@@ -2,8 +2,12 @@ import * as express from 'express';
 import * as path from 'path';
 import * as hbs from 'hbs';
 import * as services from './utils/services';
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT;
 
 const author = {
 	name: 'Akash Mondal',
@@ -92,6 +96,6 @@ app.get('*', (req, res) => {
 	});
 });
 
-app.listen(3000, () => {
-	console.log('Server is up on port 3000.');
+app.listen(PORT, () => {
+	console.log('Server is up on port ' + PORT);
 });

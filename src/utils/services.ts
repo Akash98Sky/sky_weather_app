@@ -1,9 +1,6 @@
 import { Mapbox } from "./@types/mapbox_types";
 import { Weather } from "./@types/openweather_types";
 import { fetchJson } from "./helper";
-import * as dotenv from "dotenv";
-
-dotenv.config();
 
 const openweather_url = 'https://api.openweathermap.org/data/2.5/onecall';
 
